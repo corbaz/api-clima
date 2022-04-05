@@ -43,11 +43,11 @@ Con Yarn:
 yarn add -D tailwindcss@latest postcss@latest autoprefixer@latest
 
 
-----------------------------------------------------------------
-Creamos el archivo de configuración de Tailwind CSS y de PostCSS
-----------------------------------------------------------------
+-------------------------------------------------------------------
+Creacióon de archivos de configuración de Tailwind CSS y de PostCSS
+-------------------------------------------------------------------
 'tailwind.config.js' - 'postcss.config.js'
-----------------------------------------------------------------
+-------------------------------------------------------------------
 
 npx tailwindcss init -p
 
@@ -70,4 +70,41 @@ agregaremos las directivas en el index.css
 @tailwind components;
 @tailwind utilities;
 
+
+para el mensaje de Warning: "Unknown at rule @tailwind",
+
+1. Simplemente vaya a la configuración de usuario (ctrl +,) para acceso directo.
+2. Busque CSS en la barra de búsqueda. 
+3. Busque el (CSS> Lint:Unknown At Rules) 
+4. Seleccione "Ignorar" de las opciones desplegables.
+
 ```
+
+### Documentación Oficial de Vite: https://vitejs.dev/
+
+### Documentación Oficial de React: https://es.reactjs.org/
+
+### Documentación Oficial de TailwindCSS: https://tailwindcss.com
+
+
+git init
+
+Quick setup — if you’ve done this kind of thing before
+or	
+https://github.com/corbaz/api-clima.git
+Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
+
+…or create a new repository on the command line
+echo "# api-clima" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/corbaz/api-clima.git
+git push -u origin main
+…or push an existing repository from the command line
+git remote add origin https://github.com/corbaz/api-clima.git
+git branch -M main
+git push -u origin main
+…or import code from another repository
+You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
