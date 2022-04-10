@@ -1,6 +1,10 @@
-# Proyecto Clima
+# Proyecto Clima5 - API de Clima Open Weather Map
+
+## Sitio Web de consulta API: https://openweathermap.org/api
+___
 
 ## Vite.js + React + Tailwind CSS v3
+___
 
 ```
 -------------
@@ -44,7 +48,7 @@ yarn add -D tailwindcss@latest postcss@latest autoprefixer@latest
 
 
 -------------------------------------------------------------------
-Creacióon de archivos de configuración de Tailwind CSS y de PostCSS
+Creación de archivos de configuración de Tailwind CSS y de PostCSS
 -------------------------------------------------------------------
 'tailwind.config.js' - 'postcss.config.js'
 -------------------------------------------------------------------
@@ -79,32 +83,61 @@ para el mensaje de Warning: "Unknown at rule @tailwind",
 4. Seleccione "Ignorar" de las opciones desplegables.
 
 ```
-
+___
 ### Documentación Oficial de Vite: https://vitejs.dev/
 
 ### Documentación Oficial de React: https://es.reactjs.org/
 
 ### Documentación Oficial de TailwindCSS: https://tailwindcss.com
+___
 
+```
+----------------------------------------------------------
+Inicialización de Git y Creación del repositorio en Github
+----------------------------------------------------------
 
 git init
 
-Quick setup — if you’ve done this kind of thing before
-or	
+Repositorio:
 https://github.com/corbaz/api-clima.git
-Get started by creating a new file or uploading an existing file. We recommend every repository include a README, LICENSE, and .gitignore.
 
-…or create a new repository on the command line
-echo "# api-clima" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
+
+git add .
+git commit -m "Instalación"
 git branch -M main
 git remote add origin https://github.com/corbaz/api-clima.git
 git push -u origin main
-…or push an existing repository from the command line
-git remote add origin https://github.com/corbaz/api-clima.git
-git branch -M main
-git push -u origin main
-…or import code from another repository
-You can initialize this repository with code from a Subversion, Mercurial, or TFS project.
+
+```
+___
+
+```
+Para consultar la api
+
+debí crear una cuenta en:
+
+* https://home.openweathermap.org/users/sign_up
+
+* cree un usuario: corbaz
+     con password: climacinco 
+
+Recibi un mail con un link para la verificación de mi direccióon de email.     
+```
+
+## Verificación
+
+<img src="./assets/email.png" alt="email" width="300px"/>
+
+<img src="./assets/verify.png" alt="verify" width="300px"/>
+
+___
+
+## API  
+### https://home.openweathermap.org/api_keys
+
+* KEY:      
+41c24d525dac0eed946d6145c5e582c5
+
+* NAME:     
+clima5
+___
