@@ -15,7 +15,7 @@ const tw = {
   a: "text-[#174a9b] hover:text-yellow-500 py-2 px-4",
 };
 
-const Footer = () => {
+export const Footer = () => {
   const { url_programador, programador, url_empresa, empresa } = datos;
 
   return (
@@ -47,5 +47,3 @@ const Footer = () => {
     </div>
   );
 };
-
-export default Footer;

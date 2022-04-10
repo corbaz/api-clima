@@ -7,18 +7,18 @@
 
 import { types } from "../types/types"
 
-export const ciudadesReducer = (state = {}, action) => {
+export const ciudadesReducer = (state = { ciudad: 'Mar del Plata' }, action) => {
     switch (action.type) {
         case types.ba:
-            return { ciudad: actions.payload.ciudad }
+            return { ciudad: action.payload.ciudad }
         case types.ma:
-            return { ciudad: actions.payload.ciudad }
+            return { ciudad: action.payload.ciudad }
         case types.pa:
-            return { ciudad: actions.payload.ciudad }
+            return { ciudad: action.payload.ciudad }
         case types.wa:
-            return { ciudad: actions.payload.ciudad }
+            return { ciudad: action.payload.ciudad }
         case types.mo:
-            return { ciudad: actions.payload.ciudad }
+            return { ciudad: action.payload.ciudad }
         default:
             return state
     }

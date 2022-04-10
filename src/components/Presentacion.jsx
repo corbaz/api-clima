@@ -1,9 +1,9 @@
 import React from "react";
 
 import { datos } from "../models/data";
-import Footer from "./Footer.jsx";
+import { Footer } from "./Footer.jsx";
 
-const Presentacion = (props) => {
+export const Presentacion = (props) => {
   const css = {
     logo: {
       height: "40vmin",
@@ -37,5 +37,3 @@ const Presentacion = (props) => {
     </>
   );
 };
-
-export default Presentacion;

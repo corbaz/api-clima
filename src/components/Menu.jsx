@@ -1,7 +1,7 @@
 import React from "react";
 import { ciudades } from "../models/data";
 
-const Menu = (props) => {
+export const Menu = (props) => {
   const tw = {
     boton: `block py-2 pr-4 pl-3
       border-b-2 text-blue-300 bg-transparent border-transparent
@@ -112,5 +112,3 @@ const Menu = (props) => {
     </nav>
   );
 };
-
-export default Menu;
