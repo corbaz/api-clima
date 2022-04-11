@@ -4,11 +4,18 @@ import { Main } from "./Main.jsx";
 import { Footer } from "./Footer.jsx";
 
 export const Clima5 = (props) => {
+  const [cod, setCod] = useState("");
+  const [pais, setPais] = useState("");
   const [ciudad, setCiudad] = useState("");
   return (
     <>
-      <Menu setPresentacion={props.setPresentacion} setCiudad={setCiudad} />
-      <Main ciudad={ciudad}></Main>
+      <Menu
+        setPresentacion={props.setPresentacion}
+        setCod={setCod}
+        setPais={setPais}
+        setCiudad={setCiudad}
+      />
+      <Main cod={cod} pais={pais} ciudad={ciudad} />
       <Footer />
     </>
   );

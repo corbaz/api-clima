@@ -9,9 +9,29 @@ export const datos = {
 }
 
 export const ciudades = [
-    { ciudad: "Buenos Aires" },
-    { ciudad: "Madrid" },
-    { ciudad: "París" },
-    { ciudad: "Washington" },
-    { ciudad: "Moscú" },
+    {
+        cod: "AR",
+        pais: "ARGENTINA",
+        ciudad: "Buenos Aires"
+    },
+    {
+        cod: "ES",
+        pais: "ESPAÑA",
+        ciudad: "Madrid"
+    },
+    {
+        cod: "FR",
+        pais: "FRANCIA",
+        ciudad: "París"
+    },
+    {
+        cod: "EU",
+        pais: "ESTADOS UNIDOS",
+        ciudad: "Washington"
+    },
+    {
+        cod: "RU",
+        pais: "RUSIA",
+        ciudad: "Moscú"
+    },
 ];

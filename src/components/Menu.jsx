@@ -1,4 +1,5 @@
 import React from "react";
+import { Provider } from "react-redux";
 import { ciudades } from "../models/data";
 
 export const Menu = (props) => {
@@ -99,7 +100,12 @@ export const Menu = (props) => {
                   <button
                     type="button"
                     className={tw.boton}
-                    onClick={() => props.setCiudad(item.ciudad)}
+                    onClick={() => {
+                      props.setCod(item.cod);
+                      props.setPais(item.pais);
+                      props.setCiudad(item.ciudad);
+                      abrirMenu();
+                    }}
                   >
                     {item.ciudad}
                   </button>
