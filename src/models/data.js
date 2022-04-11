@@ -10,28 +10,33 @@ export const datos = {
 
 export const ciudades = [
     {
+        cod: "MD",
+        pais: "ARGENTINA",
+        ciudad: "Mar del Plata",
+        offset: 0
+    }, {
         cod: "AR",
         pais: "ARGENTINA",
-        ciudad: "Buenos Aires"
+        ciudad: "Buenos Aires",
+        offset: 0
     },
     {
         cod: "ES",
         pais: "ESPAÑA",
-        ciudad: "Madrid"
+        ciudad: "Madrid",
+        offset: 5
     },
     {
         cod: "FR",
         pais: "FRANCIA",
-        ciudad: "París"
+        ciudad: "París",
+        offset: 5
     },
     {
         cod: "EU",
         pais: "ESTADOS UNIDOS",
-        ciudad: "Washington"
+        ciudad: "Washington",
+        offset: -4
     },
-    {
-        cod: "RU",
-        pais: "RUSIA",
-        ciudad: "Moscú"
-    },
+
 ];

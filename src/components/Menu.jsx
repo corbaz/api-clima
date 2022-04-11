@@ -12,9 +12,6 @@ export const Menu = (props) => {
   const abrirMenu = () => {
     const div = document.getElementById("mobile-menu-clima5");
     div.classList.toggle("hidden");
-    //   div.className = div.className.includes("hidden")
-    //     ? "justify-between items-center w-full md:flex md:w-auto md:order-1"
-    //     : "hidden justify-between items-center w-full md:flex md:w-auto md:order-1";
   };
 
   return (
@@ -104,6 +101,7 @@ export const Menu = (props) => {
                       props.setCod(item.cod);
                       props.setPais(item.pais);
                       props.setCiudad(item.ciudad);
+                      props.setOffset(item.offset);
                       abrirMenu();
                     }}
                   >
