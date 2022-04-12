@@ -5,7 +5,7 @@ import { Presentacion } from "./components/Presentacion";
 import { Clima5 } from "./components/Clima5";
 
 export const App = () => {
-  const [presentacion, setPresentacion] = useState(false);
+  const [presentacion, setPresentacion] = useState(true);
   return (
     <div className="App">
       <header className="App-header">

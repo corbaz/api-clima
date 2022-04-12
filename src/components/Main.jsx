@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 // import { FormularioCiudad } from "./FormularioCiudad";
 
 export const Main = (props) => {
-  const { cod, pais, ciudad } = props;
+  const { pais, ciudad } = props;
   const [clima, setClima] = useState({});
 
   useEffect(() => {
@@ -14,7 +14,8 @@ export const Main = (props) => {
 
         const respuestaApi = await fetch(API_URL);
         const datosJson = await respuestaApi.json();
-        console.log(datosJson);
+        // console.log(datosJson);
+
         if (datosJson) {
           const UTC_TimezoneOffset_Pais = datosJson.timezone * 1000;
           const UTC_TimezoneOffset_Local =
@@ -24,14 +25,14 @@ export const Main = (props) => {
           const UTC = UTC_Local + UTC_TimezoneOffset_Local;
           const UTC_Pais = UTC + UTC_TimezoneOffset_Pais;
 
-          console.clear();
+          //   console.clear();
           //   console.log("UTC", UTC);
           //   console.log("UTC_Local", UTC_Local);
           //   console.log("UTC_TimezoneOffset_Pais", UTC_TimezoneOffset_Pais);
           //   console.log("UTC_TimezoneOffset_Local", UTC_TimezoneOffset_Local);
-          console.log("Hora UTC", new Date(UTC));
-          console.log("Hora UTC_Local", new Date(UTC_Local));
-          console.log("Hora UTC_Pais", new Date(UTC_Pais));
+          //   console.log("Hora UTC", new Date(UTC));
+          //   console.log("Hora UTC_Local", new Date(UTC_Local));
+          //   console.log("Hora UTC_Pais", new Date(UTC_Pais));
 
           const FECHA = new Date(UTC_Pais).toLocaleDateString("es-AR", {
             weekday: "long",
