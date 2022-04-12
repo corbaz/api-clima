@@ -24,11 +24,7 @@ export const Menu = (props) => {
           className="flex items-center"
           onClick={() => props.setPresentacion(true)}
         >
-          <img
-            src="/assets/favicon.svg"
-            className="mr-3 h-6 sm:h-9"
-            alt="Clima 5"
-          />
+          <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Clima 5" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
             Clima 5
           </span>

@@ -19,7 +19,7 @@ export const Presentacion = (props) => {
 
   return (
     <>
-      <img src="/assets/favicon.svg" style={css.logo} alt="logo" />
+      <img src="/favicon.svg" style={css.logo} alt="logo" />
       <p>{datos.titulo}</p>
       <p>{datos.empresa}</p>
       <p>
