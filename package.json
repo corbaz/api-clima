@@ -1,7 +1,14 @@
 {
   "name": "clima",
+  "description": "Clima5",
+  "author": "Julio Cesar Corbaz <julio.corbaz@gmail.com>",
+  "license": "MIT",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "repository": {
+    "url": ",git@github.com:corbaz/api-clima.git",
+    "type": "git"
+  },
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
