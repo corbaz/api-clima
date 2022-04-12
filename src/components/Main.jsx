@@ -62,14 +62,14 @@ export const Main = (props) => {
 
           const data = {
             Temperatura: `${datosJson.main.temp.toFixed(0)}°`,
-            Termica: `${datosJson.main.feels_like.toFixed(0)}°C`,
+            Termica: `${datosJson.main.feels_like.toFixed(0)}°`,
             Maxima: `${datosJson.main.temp_max.toFixed(1)}°C ↑`,
             Minima: `${datosJson.main.temp_min.toFixed(1)}°C ↓`,
             Humedad: `${datosJson.main.humidity} %`,
             Presion: `${datosJson.main.pressure} hPa`,
             Viento: `${(datosJson.wind.speed * 3.6).toFixed(0)} km/h`,
             Dirección: `${datosJson.wind.deg}°`,
-            Visibilidad: `${datosJson.visibility} m`,
+            Visibilidad: `${(datosJson.visibility / 1000).toFixed(0)} km`,
             Pais: datosJson.sys.country,
             Ciudad: datosJson.name,
             Amanecer: SOL,
@@ -94,34 +94,35 @@ export const Main = (props) => {
     clima && (
       <div className="h-screen w-full flex">
         <div className="flex1 mx-auto my-auto mt-24">
-          {/* <h1 className="text-blue-700 text-4xl mx-auto mb-8">Clima 5</h1> */}
           <div className="text-3xl mx-auto">{ciudad}</div>
           <div className="text-xl mx-auto mb-8">{pais}</div>
           <div className="text-2xl font-bold mx-auto mb-2">{clima.Fecha}</div>
           <div className="text-xl font-bold mx-auto mb-2">
             {`Max: ${clima.Maxima}`}
-          </div>{" "}
+          </div>
           <div className="text-xl font-bold mx-auto mb-4">
             {`Min:  ${clima.Minima}`}
           </div>
-          <div className="text-8xl mx-auto mb-4">{`${clima.Temperatura} `}</div>
+          <div className="text-8xl mx-auto mb-4">{clima.Temperatura}</div>
           <div className="text-xl mx-auto mb-2">
-            {`Sensación térmica de ${clima.Termica} `}
+            {`Sensación térmica de ${clima.Termica}`}
           </div>
-          <div className="text-xl mx-auto mb-2">{`${clima.Estado} `}</div>
+          <div className="text-xl mx-auto mb-1">
+            {clima.Estado.toUpperCase()}
+          </div>
           <img
             className="text-3xl mx-auto mb-2"
             src={clima.Imagen}
             alt={clima.Estado}
           />
-          <div className="text-base md:text-xl  mx-auto mb-2">
-            {`Humedad 💧 ${clima.Humedad} ¦ Presión 🌡 ${clima.Presion} `}
+          <div className="text-xs md:text-sm mx-auto mb-2">
+            {`PRESION 🌡 ${clima.Presion} ¦ HUMEDAD 💧 ${clima.Humedad}`}
           </div>
-          <div className="text-base md:text-xl mx-auto mb-2">
-            {`Visivilidad 👁 ${clima.Visibilidad} ¦ Viento 🪁 ${clima.Viento} `}
+          <div className="text-xs md:text-sm mx-auto mb-2">
+            {`VISIVILIDAD 👁 ${clima.Visibilidad} ¦ VIENTO 🪁 ${clima.Viento} `}
           </div>
-          <div className="text-base md:text-xl mx-auto mb-2">
-            {`Salida del Sol 🌞 ${clima.Amanecer} ¦ Puesta del Sol 🌜 ${clima.Atardecer} `}
+          <div className="text-xs md:text-sm mx-auto mb-2">
+            {`SALIDA DEL SOL 🌞 ${clima.Amanecer} ¦ PUESTA DEL SOL 🌜 ${clima.Atardecer} `}
           </div>
         </div>
       </div>
