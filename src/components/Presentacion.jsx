@@ -10,19 +10,18 @@ export const Presentacion = (props) => {
       pointerEvents: "none",
     },
     button: {
-      fontSize: "calc(2px + 2vmin)",
+      fontSize: "calc(6px + 2vmin)",
     },
   };
   const tw = {
-    p: "text-[black]",
-    button: "mt-8 p-8 bg-[#174a9b] text-white font-bold py-2 px-4 rounded-full",
+    button: "mt-8 bg-[#174a9b] text-red-500 font-bold py-1 px-4 rounded-full",
   };
 
   return (
     <>
       <img src={datos.logo} style={css.logo} alt="logo" />
-      <p className={tw.p}>{datos.titulo}</p>
-      <p className={tw.p}>{datos.empresa}</p>
+      <p>{datos.titulo}</p>
+      <p>{datos.empresa}</p>
       <p>
         <button
           type="button"

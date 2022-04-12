@@ -10,9 +10,8 @@ const css = {
 };
 
 const tw = {
-  footer:
-    "fixed bottom-4 text-[#174a9b] text-base flex justify-center items-center",
-  a: "text-[#174a9b] hover:text-yellow-500 py-2 px-4",
+  footer: "fixed bottom-4 text-base flex justify-center items-center",
+  a: "hover:text-yellow-500 py-2 px-4",
 };
 
 export const Footer = () => {
@@ -47,3 +46,5 @@ export const Footer = () => {
     </div>
   );
 };
+
+export default Footer;
