@@ -2,6 +2,7 @@ import React from "react";
 
 import { datos } from "../models/data";
 import { Footer } from "./Footer.jsx";
+import logo from "../../assets/favicon.svg";
 
 export const Presentacion = (props) => {
   const css = {
@@ -19,7 +20,7 @@ export const Presentacion = (props) => {
 
   return (
     <>
-      <img src="/favicon.svg" style={css.logo} alt="logo" />
+      <img src={logo} style={css.logo} alt="logo" />
       <p>{datos.titulo}</p>
       <p>{datos.empresa}</p>
       <p>

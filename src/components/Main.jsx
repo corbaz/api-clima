@@ -76,7 +76,7 @@ export const Main = (props) => {
             Atardecer: LUNA,
             Fecha: FECHA,
             Imagen: `http://openweathermap.org/img/wn/${datosJson.weather[0].icon}@2x.png`,
-            Estado: `${datosJson.weather[0].description}`,
+            Estado: `${datosJson.weather[0].description.toUpperCase()}`,
           };
           //alert(JSON.stringify(data));
           setClima(data);
@@ -107,9 +107,7 @@ export const Main = (props) => {
           <div className="text-xl mx-auto mb-2">
             {`Sensación térmica de ${clima.Termica}`}
           </div>
-          <div className="text-xl mx-auto mb-1">
-            {clima.Estado.toUpperCase()}
-          </div>
+          <div className="text-xl mx-auto mb-1">{clima.Estado}</div>
           <img
             className="text-3xl mx-auto mb-2"
             src={clima.Imagen}

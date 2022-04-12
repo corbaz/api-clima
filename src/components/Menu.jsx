@@ -1,6 +1,7 @@
 import React from "react";
 import { Provider } from "react-redux";
 import { ciudades } from "../models/data";
+import logo from "../../assets/favicon.svg";
 
 export const Menu = (props) => {
   const tw = {
@@ -24,7 +25,7 @@ export const Menu = (props) => {
           className="flex items-center"
           onClick={() => props.setPresentacion(true)}
         >
-          <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Clima 5" />
+          <img src={logo} className="mr-3 h-6 sm:h-9" alt="Clima 5" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
             Clima 5
           </span>
