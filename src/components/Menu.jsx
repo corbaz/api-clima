@@ -17,7 +17,7 @@ export const Menu = (props) => {
 
   return (
     //Menu Nav
-    <nav className="fixed top-0 left-0 right-0 bg-[#174a9b] px-3 py-3">
+    <nav className="fixed z-30 top-0 left-0 right-0 bg-[#174a9b] px-3 py-3">
       {/* Contenedor del Menu Gral. */}
       <div className="flex flex-wrap justify-between items-center w-full">
         {/* Logo */}

@@ -10,7 +10,8 @@ const css = {
 };
 
 const tw = {
-  footer: "fixed bottom-4 text-base flex justify-center items-center",
+  footer:
+    "fixed z-20 bottom-0 text-base w-full flex justify-center items-center",
   a: "hover:text-yellow-500 py-2 px-4",
 };
 

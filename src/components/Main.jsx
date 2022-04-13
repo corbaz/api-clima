@@ -90,8 +90,8 @@ export const Main = (props) => {
 
   return (
     clima.Temperatura !== undefined && (
-      <div className="h-screen w-full flex">
-        <div className="flex1 mx-auto my-auto">
+      <div className="h-screen w-full fixed z-10 flex">
+        <div className="flex-1 mx-auto my-auto">
           <div className="text-3xl mx-auto">{ciudad}</div>
           <div className="text-xl mx-auto mb-8">{pais}</div>
           <div className="text-2xl font-bold mx-auto mb-2">{clima.Fecha}</div>
