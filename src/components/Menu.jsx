@@ -25,7 +25,7 @@ export const Menu = (props) => {
           className="flex items-center"
           onClick={() => props.setPresentacion(true)}
         >
-          <img src={logo} className="mr-3 h-6 sm:h-9" alt="Clima 5" />
+          <img src={logo} className="mr-1 h-6 sm:h-9" alt="Clima 5" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
             Clima 5
           </span>
@@ -35,7 +35,7 @@ export const Menu = (props) => {
         <div className="flex justify-center items-center md:order-2">
           {/* Boton ir Home */}
           <svg
-            className="h-6 text-sm px-5 py-0 text-center mr-3 md:mr-3"
+            className="h-6 text-sm px-1 py-0 text-center mr-3 md:mr-3"
             fill="white"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +87,7 @@ export const Menu = (props) => {
           id="mobile-menu-clima5"
           className="hidden justify-between items-center w-full md:flex md:w-auto md:order-1"
         >
-          <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+          <ul className="flex flex-col mt-4 md:flex-row md:space-x-2 md:mt-0 md:text-sm md:font-medium">
             {ciudades.map((item, index) => {
               return (
                 <li key={index} className="flex justify-center">

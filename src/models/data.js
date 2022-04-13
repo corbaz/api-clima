@@ -11,9 +11,18 @@ export const ciudades = [
     {
         pais: "ARGENTINA",
         ciudad: "Mar del Plata",
-    }, {
+    },
+    {
         pais: "ARGENTINA",
         ciudad: "Buenos Aires",
+    },
+    {
+        pais: "BRAZIL",
+        ciudad: "Sao Paulo",
+    },
+    {
+        pais: "ESTADOS UNIDOS",
+        ciudad: "Miami",
     },
     {
         pais: "ESPAÑA",
@@ -23,9 +32,4 @@ export const ciudades = [
         pais: "FRANCIA",
         ciudad: "París",
     },
-    {
-        pais: "ESTADOS UNIDOS",
-        ciudad: "Washington",
-    },
-
 ];

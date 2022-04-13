@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-// import { FormularioCiudad } from "./FormularioCiudad";
 
 export const Main = (props) => {
   const { pais, ciudad } = props;
@@ -25,14 +24,14 @@ export const Main = (props) => {
           const UTC = UTC_Local + UTC_TimezoneOffset_Local;
           const UTC_Pais = UTC + UTC_TimezoneOffset_Pais;
 
-          //   console.clear();
-          //   console.log("UTC", UTC);
-          //   console.log("UTC_Local", UTC_Local);
-          //   console.log("UTC_TimezoneOffset_Pais", UTC_TimezoneOffset_Pais);
-          //   console.log("UTC_TimezoneOffset_Local", UTC_TimezoneOffset_Local);
-          //   console.log("Hora UTC", new Date(UTC));
-          //   console.log("Hora UTC_Local", new Date(UTC_Local));
-          //   console.log("Hora UTC_Pais", new Date(UTC_Pais));
+          //console.clear();
+          //console.log("UTC", UTC);
+          //console.log("UTC_Local", UTC_Local);
+          //console.log("UTC_TimezoneOffset_Pais", UTC_TimezoneOffset_Pais);
+          //console.log("UTC_TimezoneOffset_Local", UTC_TimezoneOffset_Local)
+          //console.log("Hora UTC", new Date(UTC));
+          //console.log("Hora UTC_Local", new Date(UTC_Local));
+          //console.log("Hora UTC_Pais", new Date(UTC_Pais));
 
           const FECHA = new Date(UTC_Pais).toLocaleDateString("es-AR", {
             weekday: "long",
@@ -90,10 +89,9 @@ export const Main = (props) => {
   }, [ciudad]);
 
   return (
-    ciudad &&
-    clima && (
+    clima.Temperatura !== undefined && (
       <div className="h-screen w-full flex">
-        <div className="flex1 mx-auto my-auto mt-24">
+        <div className="flex1 mx-auto my-auto">
           <div className="text-3xl mx-auto">{ciudad}</div>
           <div className="text-xl mx-auto mb-8">{pais}</div>
           <div className="text-2xl font-bold mx-auto mb-2">{clima.Fecha}</div>
@@ -117,7 +115,7 @@ export const Main = (props) => {
             {`PRESION 🌡 ${clima.Presion} ¦ HUMEDAD 💧 ${clima.Humedad}`}
           </div>
           <div className="text-xs md:text-sm mx-auto mb-2">
-            {`VISIVILIDAD 👁 ${clima.Visibilidad} ¦ VIENTO 🪁 ${clima.Viento} `}
+            {`VISIVILIDAD 👁 ${clima.Visibilidad} ¦ VIENTO 🌪 ${clima.Viento} `}
           </div>
           <div className="text-xs md:text-sm mx-auto mb-2">
             {`SALIDA DEL SOL 🌞 ${clima.Amanecer} ¦ PUESTA DEL SOL 🌜 ${clima.Atardecer} `}
