@@ -1,10 +1,12 @@
 # Proyecto Clima5 - API de Clima Open Weather Map
 
 ## Sitio Web de consulta API: https://openweathermap.org/api
-___
+
+---
 
 ## Vite.js + React + Tailwind CSS v3
-___
+
+---
 
 ```
 -------------
@@ -78,18 +80,21 @@ agregaremos las directivas en el index.css
 para el mensaje de Warning: "Unknown at rule @tailwind",
 
 1. Simplemente vaya a la configuración de usuario (ctrl +,) para acceso directo.
-2. Busque CSS en la barra de búsqueda. 
-3. Busque el (CSS> Lint:Unknown At Rules) 
+2. Busque CSS en la barra de búsqueda.
+3. Busque el (CSS> Lint:Unknown At Rules)
 4. Seleccione "Ignorar" de las opciones desplegables.
 
 ```
-___
+
+---
+
 ### Documentación Oficial de Vite: https://vitejs.dev/
 
 ### Documentación Oficial de React: https://es.reactjs.org/
 
 ### Documentación Oficial de TailwindCSS: https://tailwindcss.com
-___
+
+---
 
 ```
 ----------------------------------------------------------
@@ -109,7 +114,8 @@ git remote add origin https://github.com/corbaz/api-clima.git
 git push -u origin main
 
 ```
-___
+
+---
 
 ```
 Para consultar la api
@@ -119,9 +125,9 @@ debí crear una cuenta en:
 * https://home.openweathermap.org/users/sign_up
 
 * cree un usuario: corbaz
-     con password: climacinco 
+     con password: **********
 
-Recibi un mail con un link para la verificación de mi direccióon de email.     
+Recibi un mail con un link para la verificación de mi direccióon de email.
 ```
 
 ## Verificación
@@ -130,14 +136,16 @@ Recibi un mail con un link para la verificación de mi direccióon de email.
 
 <img src="./assets/verify.png" alt="verify" width="300px"/>
 
-___
+---
 
-## API  
+## API
+
 ### https://home.openweathermap.org/api_keys
 
-* KEY:      
-41c24d525dac0eed946d6145c5e582c5
+- KEY:  
+  41c24d525dac0eed946d6145c5e582c5
 
-* NAME:     
-clima5
-___
+- NAME:  
+  clima5
+
+---
