@@ -1,6 +1,5 @@
 export const datos = {
-    titulo: '🌞🌦🌜  - CLIMA 5 -  🌤🌩🌈',
-    boton: 'Ingresar',
+    titulo: 'CLIMA 5',
     programador: 'Julio Cesar Corbaz',
     url_programador: 'https://github.com/corbaz',
     empresa: 'Telecom Argentina',

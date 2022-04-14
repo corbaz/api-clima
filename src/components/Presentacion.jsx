@@ -1,39 +1,16 @@
 import React from "react";
 
-import { datos } from "../models/data";
-import { Footer } from "./Footer.jsx";
-import logo from "../../assets/favicon.svg";
-
 export const Presentacion = (props) => {
-  const css = {
-    logo: {
-      height: "40vmin",
-      pointerEvents: "none",
-    },
-    button: {
-      fontSize: "calc(6px + 2vmin)",
-    },
-  };
-  const tw = {
-    button: "mt-8 bg-[#174a9b] text-red-500 font-bold py-1 px-4 rounded-full",
-  };
+  const { titulo, empresa } = props.datos;
 
   return (
-    <>
-      <img src={logo} style={css.logo} alt="logo" />
-      <p>{datos.titulo}</p>
-      <p>{datos.empresa}</p>
-      <p>
-        <button
-          type="button"
-          className={tw.button}
-          style={css.button}
-          onClick={() => props.setPresentacion(false)}
-        >
-          {datos.boton}
-        </button>
-      </p>
-      <Footer />
-    </>
+    <div className="z-50 grid w-full place-items-center">
+      <div className="pt-[360px] text-center text-6xl font-extrabold">
+        {titulo}
+      </div>
+      <h1 className="px-10 pb-20 text-4xl text-gray-100 font-extrabold text-center">
+        {empresa}
+      </h1>
+    </div>
   );
 };

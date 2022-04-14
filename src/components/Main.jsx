@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 
+import cielo from "../../assets/cielo.jpeg";
+import logo from "../../assets/favicon.svg";
+import { Presentacion } from "./Presentacion";
+
 export const Main = (props) => {
-  const { pais, ciudad } = props;
+  const { datos, pais, ciudad } = props;
   const [clima, setClima] = useState({});
 
   useEffect(() => {
@@ -75,7 +79,7 @@ export const Main = (props) => {
             Atardecer: LUNA,
             Fecha: FECHA,
             Imagen: `http://openweathermap.org/img/wn/${datosJson.weather[0].icon}@2x.png`,
-            Estado: `${datosJson.weather[0].description.toUpperCase()}`,
+            Estado: datosJson.weather[0].description.toUpperCase(),
           };
           //alert(JSON.stringify(data));
           setClima(data);
@@ -89,9 +93,12 @@ export const Main = (props) => {
   }, [ciudad]);
 
   return (
-    clima.Temperatura !== undefined && (
-      <div className="h-screen w-full fixed z-10 flex">
-        <div className="flex-1 mx-auto my-auto">
+    <div
+      className="h-screen w-full fixed z-10 flex bg-cover bg-no-repeat bg-center text-[#174a9b]"
+      style={{ backgroundImage: `url(${cielo})` }}
+    >
+      {clima.Temperatura !== undefined && ciudad ? (
+        <div className="mx-auto my-auto p-4 rounded-lg text-center bg-slate-300 bg-opacity-70">
           <div className="text-3xl mx-auto">{ciudad}</div>
           <div className="text-xl mx-auto mb-8">{pais}</div>
           <div className="text-2xl font-bold mx-auto mb-2">{clima.Fecha}</div>
@@ -111,17 +118,20 @@ export const Main = (props) => {
             src={clima.Imagen}
             alt={clima.Estado}
           />
-          <div className="text-xs md:text-sm mx-auto mb-2">
-            {`PRESION 🌡 ${clima.Presion} ¦ HUMEDAD 💧 ${clima.Humedad}`}
+          <div className="text-sm md:text-base mx-auto mb-2">
+            {`VIENTO 🌪 ${clima.Viento} ¦ HUMEDAD 💧 ${clima.Humedad}`}
           </div>
-          <div className="text-xs md:text-sm mx-auto mb-2">
-            {`VISIVILIDAD 👁 ${clima.Visibilidad} ¦ VIENTO 🌪 ${clima.Viento} `}
+          <div className="text-sm md:text-base mx-auto mb-2">
+            {`VISIVILIDAD 👁 ${clima.Visibilidad} ¦ PRESION 🌡 ${clima.Presion} `}
           </div>
-          <div className="text-xs md:text-sm mx-auto mb-2">
+          <div className="text-sm md:text-base mx-auto mb-2">
             {`SALIDA DEL SOL 🌞 ${clima.Amanecer} ¦ PUESTA DEL SOL 🌜 ${clima.Atardecer} `}
           </div>
         </div>
-      </div>
-    )
+      ) : (
+        <Presentacion datos={datos} />
+      )}
+      ;
+    </div>
   );
 };

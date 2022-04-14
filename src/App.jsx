@@ -1,20 +1,24 @@
 import { useState } from "react";
 import "./App.css";
+import { datos, ciudades } from "./models/data";
 
-import { Presentacion } from "./components/Presentacion";
-import { Clima5 } from "./components/Clima5";
+import { Menu } from "./components/Menu.jsx";
+import { Main } from "./components/Main.jsx";
+import { Footer } from "./components/Footer.jsx";
 
 export const App = () => {
-  const [presentacion, setPresentacion] = useState(true);
+  const [pais, setPais] = useState("");
+  const [ciudad, setCiudad] = useState("");
   return (
-    <div className="App">
-      <header className="App-header">
-        {presentacion ? (
-          <Presentacion setPresentacion={setPresentacion} />
-        ) : (
-          <Clima5 setPresentacion={setPresentacion} />
-        )}
-      </header>
+    <div className="App-header">
+      <Menu
+        datos={datos}
+        ciudades={ciudades}
+        setPais={setPais}
+        setCiudad={setCiudad}
+      />
+      <Main datos={datos} ciudades={ciudades} pais={pais} ciudad={ciudad} />
+      <Footer datos={datos} />
     </div>
   );
 };

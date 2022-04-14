@@ -9,9 +9,10 @@
     align-items: center;
     justify-content: center;
     font-size: calc(10px + 2vmin);
-    background-color: white;
+    background-color: #e4a331;
+    ;
 
-    animation: cambioRGB 60s infinite 3.75s;
+    animation: cambioRGB 60s infinite 5.45s;
     animation-direction: alternate;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in-out;
@@ -19,6 +20,70 @@
 
 
 @keyframes cambioRGB {
+    0% {
+        background-color: #e4a331;
+        color: #043B7C
+    }
+
+    10% {
+        background-color: #043B7C;
+        color: #31e4a6;
+    }
+
+    20% {
+        background-color: #31e4a6;
+        color: #042B64;
+
+    }
+
+    30% {
+        background-color: #145292;
+        color: #31e4a6;
+    }
+
+    40% {
+        background-color: #e4a331;
+        color: #043B7C;
+    }
+
+    50% {
+        background-color: #145292;
+        color: #e4a331;
+    }
+
+    60% {
+        background-color: #31e4a6;
+        color: #145292;
+    }
+
+    70% {
+        background-color: #043B7C;
+        color: #31e4a6;
+
+    }
+
+    80% {
+        background-color: #042B64;
+        color: #e4a331;
+    }
+
+    90% {
+        background-color: #31e4a6;
+        color: #145292;
+    }
+
+    100% {
+        background-color: #145292;
+        color: #e4a331;
+    }
+}
+
+/* @keyframes cambioRGB {
+    0% {
+        background-color: #e4a331;
+        color: black
+    }
+
     10% {
         background-color: #31e4a6;
         color: DarkSlateBlue;
@@ -70,4 +135,4 @@
         background-color: DarkSlateBlue;
         color: #31e4a6;
     }
-}
+} */
