@@ -7,6 +7,7 @@ import { Main } from "./components/Main.jsx";
 import { Footer } from "./components/Footer.jsx";
 
 export const App = () => {
+  console.clear();
   const [pais, setPais] = useState("");
   const [ciudad, setCiudad] = useState("");
   return (

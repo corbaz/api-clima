@@ -151,3 +151,19 @@ Recibi un mail con un link para la verificación de mi direccióon de email.
   clima5
 
 ---
+
+## Para hacer Deploy del Sitio Web:
+
+```
+1. retirar la carperta /dist del archivo .gitignore
+
+2. ejecutar del package.json el script:
+
+"build": "vite build",
+
+3. git add .
+
+4. git commit -m "Deploy Clima 5 version 1.0"
+
+5. git subtree push --prefix dist origin gh-pages
+```

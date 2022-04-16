@@ -5,10 +5,10 @@ export const Presentacion = (props) => {
 
   return (
     <div className="z-50 grid w-full place-items-center">
-      <div className="pt-[360px] text-center text-6xl font-extrabold">
+      <div className="pt-[450px] text-center text-5xl font-extrabold">
         {titulo}
       </div>
-      <h1 className="px-10 pb-20 text-4xl text-gray-100 font-extrabold text-center">
+      <h1 className="px-10 pb-10 text-3xl text-gray-200 font-extrabold text-center">
         {empresa}
       </h1>
     </div>

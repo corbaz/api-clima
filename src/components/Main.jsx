@@ -1,7 +1,17 @@
 import { useState, useEffect } from "react";
 
+import Portada from "../../assets/Portada.jpg";
+
 import cielo from "../../assets/cielo.jpeg";
-import logo from "../../assets/favicon.svg";
+import Thunderstorm from "../../assets/Thunderstorm.webp";
+import Rain from "../../assets/Rain.png";
+import Drizzle from "../../assets/Drizzle.jpg";
+import Snow from "../../assets/Snow.jpg";
+import Bruma from "../../assets/Bruma.webp";
+import Clear from "../../assets/Clear.webp";
+import Clouds from "../../assets/Clouds.jpg";
+
+import { Clima5 } from "./Clima5";
 import { Presentacion } from "./Presentacion";
 
 export const Main = (props) => {
@@ -17,7 +27,6 @@ export const Main = (props) => {
 
         const respuestaApi = await fetch(API_URL);
         const datosJson = await respuestaApi.json();
-        // console.log(datosJson);
 
         if (datosJson) {
           const UTC_TimezoneOffset_Pais = datosJson.timezone * 1000;
@@ -78,56 +87,46 @@ export const Main = (props) => {
             Amanecer: SOL,
             Atardecer: LUNA,
             Fecha: FECHA,
-            Imagen: `http://openweathermap.org/img/wn/${datosJson.weather[0].icon}@2x.png`,
+            Icono: `http://openweathermap.org/img/wn/${datosJson.weather[0].icon}@2x.png`,
+            Imagen:
+              datosJson.weather[0].main === "Thunderstorm"
+                ? Thunderstorm
+                : datosJson.weather[0].main === "Drizzle"
+                ? Drizzle
+                : datosJson.weather[0].main === "Rain"
+                ? Rain
+                : datosJson.weather[0].main === "Snow"
+                ? Snow
+                : datosJson.weather[0].id >= "700" &&
+                  datosJson.weather[0].id <= "799"
+                ? Bruma
+                : datosJson.weather[0].main === "Clear"
+                ? Clear
+                : datosJson.weather[0].main === "Clouds" &&
+                  datosJson.weather[0].id > "802"
+                ? Clouds
+                : cielo,
             Estado: datosJson.weather[0].description.toUpperCase(),
           };
-          //alert(JSON.stringify(data));
           setClima(data);
         } else {
-          alert("fallo");
+          alert("No hay datos para mostrar");
         }
-        return;
+      } else {
+        setClima({ Imagen: Portada });
       }
+      return;
     };
     API();
   }, [ciudad]);
 
   return (
     <div
-      className="h-screen w-full fixed z-10 flex bg-cover bg-no-repeat bg-center text-[#174a9b]"
-      style={{ backgroundImage: `url(${cielo})` }}
+      className="h-screen w-full fixed z-10 flex bg-cover bg-no-repeat bg-center "
+      style={{ backgroundImage: `url(${clima.Imagen})` }}
     >
       {clima.Temperatura !== undefined && ciudad ? (
-        <div className="mx-auto my-auto p-4 rounded-lg text-center bg-slate-300 bg-opacity-70">
-          <div className="text-3xl mx-auto">{ciudad}</div>
-          <div className="text-xl mx-auto mb-8">{pais}</div>
-          <div className="text-2xl font-bold mx-auto mb-2">{clima.Fecha}</div>
-          <div className="text-xl font-bold mx-auto mb-2">
-            {`Max: ${clima.Maxima}`}
-          </div>
-          <div className="text-xl font-bold mx-auto mb-4">
-            {`Min:  ${clima.Minima}`}
-          </div>
-          <div className="text-8xl mx-auto mb-4">{clima.Temperatura}</div>
-          <div className="text-xl mx-auto mb-2">
-            {`Sensación térmica de ${clima.Termica}`}
-          </div>
-          <div className="text-xl mx-auto mb-1">{clima.Estado}</div>
-          <img
-            className="text-3xl mx-auto mb-2"
-            src={clima.Imagen}
-            alt={clima.Estado}
-          />
-          <div className="text-sm md:text-base mx-auto mb-2">
-            {`VIENTO 🌪 ${clima.Viento} ¦ HUMEDAD 💧 ${clima.Humedad}`}
-          </div>
-          <div className="text-sm md:text-base mx-auto mb-2">
-            {`VISIVILIDAD 👁 ${clima.Visibilidad} ¦ PRESION 🌡 ${clima.Presion} `}
-          </div>
-          <div className="text-sm md:text-base mx-auto mb-2">
-            {`SALIDA DEL SOL 🌞 ${clima.Amanecer} ¦ PUESTA DEL SOL 🌜 ${clima.Atardecer} `}
-          </div>
-        </div>
+        <Clima5 ciudad={ciudad} pais={pais} clima={clima} />
       ) : (
         <Presentacion datos={datos} />
       )}
