@@ -16,7 +16,7 @@ export const Clima5 = (props) => {
       <div className="text-sm md:text-base mb-2">
         <div>{`VIENTO 🪁 ${clima.Viento} ¦ HUMEDAD 💧 ${clima.Humedad}`}</div>
         <div>
-          {`VISIVILIDAD 👁 ${clima.Visibilidad} ¦ PRESION 🌡 ${clima.Presion}`}
+          {`VISIBILIDAD 👁 ${clima.Visibilidad} ¦ PRESION 🌡 ${clima.Presion}`}
         </div>
         <div>
           {`SALIDA DEL SOL 🌞 ${clima.Amanecer} ¦ PUESTA DEL SOL 🌜 ${clima.Atardecer}`}
