@@ -4,10 +4,10 @@ export const Clima5 = (props) => {
   const { ciudad, pais, clima } = props;
   return (
     <div className="h-fit w-fit p-4 mx-auto my-auto rounded-xl text-center text-[gray] font-bold bg-slate-300 bg-opacity-70">
-      <div className="text-5xl mb-0 text-[red]">{ciudad}</div>
-      <div className="text-2xl mb-5">{pais}</div>
-      <div className="text-2xl mb-5 text-[cyan]">{clima.Fecha}</div>
-      <div className="text-8xl mb-5 text-[red]">{clima.Temperatura}</div>
+      <div className="text-5xl mb-0 text-[#e4a331]">{ciudad}</div>
+      <div className="text-2xl mb-5 text-[#e4a331]">{pais}</div>
+      <div className="text-2xl mb-5">{clima.Fecha}</div>
+      <div className="text-8xl mb-5 text-[#e4a331]">{clima.Temperatura}</div>
       <div className="text-xl mb-2">{`Sensación térmica ${clima.Termica}`}</div>
       <div className="text-xl mb-0">{`Max: ${clima.Maxima}`}</div>
       <div className="text-xl mb-0">{`Min: ${clima.Minima}`}</div>

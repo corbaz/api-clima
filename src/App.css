@@ -18,7 +18,52 @@
     animation-timing-function: ease-in-out; */
 }
 
+/* .Texto-Color {
+    color: #31e4a6;
+    animation: cambioRGB 37.50s infinite 3.75s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+} */
+
 /* 
+@keyframes cambioRGB {
+    0% {
+        color: #31e4a6;
+    }
+    10% {
+        color: #e4a331;
+    }
+    20% {
+        color: #772bec;
+    }
+    30% {
+        color: white;
+    }
+    40% {
+        color: #31e4a6;
+    }
+    50% {
+        color: #772bec;
+    }
+    60% {
+        color: #e4a331;
+    }
+    70% {
+        color: white;
+    }
+    80% {
+        color: #772bec;
+    }
+    90% {
+        color: white;
+    }
+    100% {
+        color: #e4a331;
+    }
+}
+
+
 @keyframes cambioRGB {
     0% {
         background-color: DarkSlateBlue;
