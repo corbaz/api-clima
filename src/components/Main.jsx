@@ -1,15 +1,15 @@
 import { useState, useEffect } from "react";
 
-import Portada from "../../assets/Portada.jpg";
+import Portada from "../../assets/Portada.webp";
 
-import cielo from "../../assets/cielo.jpeg";
+import cielo from "../../assets/Cielo.webp";
 import Thunderstorm from "../../assets/Thunderstorm.webp";
-import Rain from "../../assets/Rain.png";
-import Drizzle from "../../assets/Drizzle.jpg";
-import Snow from "../../assets/Snow.jpg";
+import Rain from "../../assets/Rain.webp";
+import Drizzle from "../../assets/Drizzle.webp";
+import Snow from "../../assets/Snow.webp";
 import Bruma from "../../assets/Bruma.webp";
 import Clear from "../../assets/Clear.webp";
-import Clouds from "../../assets/Clouds.jpg";
+import Clouds from "../../assets/Clouds.webp";
 
 import { Clima5 } from "./Clima5";
 import { Presentacion } from "./Presentacion";
