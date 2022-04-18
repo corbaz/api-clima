@@ -159,7 +159,7 @@ export const Main = (props) => {
 
   return (
     <div
-      className="h-screen w-full fixed z-10 flex bg-cover bg-no-repeat bg-center "
+      className="h-screen w-full fixed z-10 flex bg-cover bg-no-repeat bg-center"
       style={{ backgroundImage: `url(${clima.Imagen})` }}
     >
       {clima.Temperatura !== undefined && ciudad ? (
@@ -167,7 +167,6 @@ export const Main = (props) => {
       ) : (
         <Presentacion datos={datos} />
       )}
-      ;
     </div>
   );
 };

@@ -1,6 +1,6 @@
 export const datos = {
     titulo: 'CLIMA 5',
-    programador: 'Julio Cesar Corbaz',
+    programador: 'Julio Corbaz',
     url_programador: 'https://github.com/corbaz/api-clima',
     empresa: 'Telecom Argentina',
     url_empresa: 'https://sitios.telecom.com.ar/propuesta-de-valor/'
@@ -16,7 +16,7 @@ export const ciudades = [
         ciudad: "Buenos Aires",
     },
     {
-        pais: "BRAZIL",
+        pais: "BRASIL",
         ciudad: "Sao Paulo",
     },
     {
@@ -28,7 +28,7 @@ export const ciudades = [
         ciudad: "Madrid",
     },
     {
-        pais: "FRANCIA",
-        ciudad: "París",
+        pais: "Australia",
+        ciudad: "Sidney",
     },
 ];
