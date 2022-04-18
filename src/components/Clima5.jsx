@@ -9,14 +9,14 @@ export const Clima5 = (props) => {
       <div className="text-2xl mb-5">{clima.Fecha}</div>
       <div className="text-8xl mb-5 text-[#e4a331]">{clima.Temperatura}</div>
       <div className="text-xl mb-2">{`Sensación térmica ${clima.Termica}`}</div>
-      <div className="text-xl mb-0">{`Max: ${clima.Maxima}`}</div>
-      <div className="text-xl mb-0">{`Min: ${clima.Minima}`}</div>
+      <div className="text-xl mb-0">{`Máxima: ${clima.Maxima}`}</div>
+      <div className="text-xl mb-0">{`Mínina: ${clima.Minima}`}</div>
       <img className="mx-auto mb-0" src={clima.Icono} alt={clima.Estado} />
       <div className="text-xl mb-4">{clima.Estado}</div>
       <div className="text-sm md:text-base mb-2">
         <div>{`VIENTO 🪁 ${clima.Viento} ¦ HUMEDAD 💧 ${clima.Humedad}`}</div>
         <div>
-          {`VISIBILIDAD 👁 ${clima.Visibilidad} ¦ PRESION 🌡 ${clima.Presion}`}
+          {`VISIBILIDAD 👁 ${clima.Visibilidad} ¦ PRESIÓN 🌡 ${clima.Presion}`}
         </div>
         <div>
           {`SALIDA DEL SOL 🌞 ${clima.Amanecer} ¦ PUESTA DEL SOL 🌜 ${clima.Atardecer}`}

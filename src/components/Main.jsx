@@ -9,7 +9,9 @@ import Drizzle from "../../assets/Drizzle.webp";
 import Snow from "../../assets/Snow.webp";
 import Bruma from "../../assets/Bruma.webp";
 import Clear from "../../assets/Clear.webp";
+import Noche_Clara from "../../assets/Noche_Clara.webp";
 import Clouds from "../../assets/Clouds.webp";
+import Noche_Nublada from "../../assets/Noche_Nublada.webp";
 
 import { Clima5 } from "./Clima5";
 import { Presentacion } from "./Presentacion";
@@ -55,22 +57,50 @@ export const Main = (props) => {
             minute: "numeric",
           });
 
-          const SOL = new Date(datosJson.sys.sunrise * 1000).toLocaleTimeString(
-            "es-AR",
-            {
-              hour: "numeric",
-              hour24: "true",
-              minute: "numeric",
-            }
-          );
-          const LUNA = new Date(datosJson.sys.sunset * 1000).toLocaleTimeString(
-            "es-AR",
-            {
-              hour: "numeric",
-              hour24: "true",
-              minute: "numeric",
-            }
-          );
+          const UTC_Sol =
+            datosJson.sys.sunrise * 1000 +
+            UTC_TimezoneOffset_Local +
+            UTC_TimezoneOffset_Pais;
+
+          const SOL = new Date(
+            datosJson.sys.sunrise * 1000 +
+              UTC_TimezoneOffset_Local +
+              UTC_TimezoneOffset_Pais
+          ).toLocaleTimeString("es-AR", {
+            hour24: "true",
+            hour: "numeric",
+            minute: "numeric",
+          });
+
+          const UTC_Luna =
+            datosJson.sys.sunset * 1000 +
+            UTC_TimezoneOffset_Local +
+            UTC_TimezoneOffset_Pais;
+
+          const LUNA = new Date(
+            datosJson.sys.sunset * 1000 +
+              UTC_TimezoneOffset_Local +
+              UTC_TimezoneOffset_Pais
+          ).toLocaleTimeString("es-AR", {
+            hour24: "true",
+            hour: "numeric",
+            minute: "numeric",
+          });
+
+          // console.log("SOL", SOL, UTC_Sol);
+          // console.log("LUNA", LUNA, UTC_Luna);
+          // console.log(
+          //   "FECHA :>> ",
+          //   new Date(UTC_Pais).toLocaleTimeString("es-AR", {
+          //     hour24: "true",
+          //     hour: "numeric",
+          //     minute: "numeric",
+          //   }),
+          //   UTC_Pais
+          // );
+
+          const NOCHE = UTC_Pais >= UTC_Luna || UTC_Pais < UTC_Sol;
+          console.log("NOCHE :>> ", NOCHE);
 
           const data = {
             Temperatura: `${datosJson.main.temp.toFixed(0)}°`,
@@ -100,11 +130,18 @@ export const Main = (props) => {
                 : datosJson.weather[0].id >= "700" &&
                   datosJson.weather[0].id <= "799"
                 ? Bruma
-                : datosJson.weather[0].main === "Clear"
+                : datosJson.weather[0].main === "Clear" && NOCHE === false
                 ? Clear
+                : datosJson.weather[0].main === "Clear" && NOCHE === true
+                ? Noche_Clara
                 : datosJson.weather[0].main === "Clouds" &&
-                  datosJson.weather[0].id > "802"
+                  datosJson.weather[0].id > "802" &&
+                  NOCHE === false
                 ? Clouds
+                : datosJson.weather[0].main === "Clouds" &&
+                  datosJson.weather[0].id > "802" &&
+                  NOCHE === true
+                ? Noche_Nublada
                 : cielo,
             Estado: datosJson.weather[0].description.toUpperCase(),
           };
