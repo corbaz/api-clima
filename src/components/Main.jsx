@@ -134,13 +134,9 @@ export const Main = (props) => {
                 ? Clear
                 : datosJson.weather[0].main === "Clear" && NOCHE === true
                 ? Noche_Clara
-                : datosJson.weather[0].main === "Clouds" &&
-                  datosJson.weather[0].id > "802" &&
-                  NOCHE === false
+                : datosJson.weather[0].main === "Clouds" && NOCHE === false
                 ? Clouds
-                : datosJson.weather[0].main === "Clouds" &&
-                  datosJson.weather[0].id > "802" &&
-                  NOCHE === true
+                : datosJson.weather[0].main === "Clouds" && NOCHE === true
                 ? Noche_Nublada
                 : cielo,
             Estado: datosJson.weather[0].description.toUpperCase(),

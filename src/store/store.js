@@ -42,7 +42,9 @@
 
 // export default AppRedux;
 
-import { createStore, combineReducers } from 'redux'
+import { createStore } from 'react-redux';
+
+import { combineReducers } from 'redux'
 import { ciudadesReducer } from '../reducers/ciudadesReducer'
 
 
