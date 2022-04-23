@@ -1,8 +1,14 @@
 # Proyecto Clima5 - API de Clima Open Weather Map
 
+---
+
+## Sitio WEB:
+
 ## https://corbaz.github.io/api-clima/
 
-## Sitio Web de consulta API: https://openweathermap.org/api
+## Sitio Web de consulta API:
+
+## https://openweathermap.org/api
 
 ---
 
@@ -172,4 +178,4 @@ Recibi un mail con un link para la verificación de mi direccióon de email.
 
 ## Sitio WEB:
 
-https://corbaz.github.io/api-clima/
+## https://corbaz.github.io/api-clima/
