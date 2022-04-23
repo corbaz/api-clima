@@ -25,7 +25,7 @@ export const ciudades = [
     },
     {
         pais: "ESPAÑA",
-        ciudad: "Madrid",
+        ciudad: "Ibiza",
     },
     {
         pais: "Australia",
