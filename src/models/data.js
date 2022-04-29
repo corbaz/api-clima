@@ -2,7 +2,7 @@ export const datos = {
     titulo: 'CLIMA 5',
     programador: 'Julio Corbaz',
     url_programador: 'https://github.com/corbaz/api-clima',
-    empresa: 'Telecom Argentina',
+    empresa: 'Telecom',
     url_empresa: 'https://sitios.telecom.com.ar/propuesta-de-valor/'
 }
 

@@ -4,7 +4,6 @@ import { datos, ciudades } from "./models/data";
 
 import { Menu } from "./components/Menu.jsx";
 import { Main } from "./components/Main.jsx";
-import { Footer } from "./components/Footer.jsx";
 
 export const App = () => {
   console.clear();
@@ -19,7 +18,6 @@ export const App = () => {
         setCiudad={setCiudad}
       />
       <Main datos={datos} ciudades={ciudades} pais={pais} ciudad={ciudad} />
-      <Footer datos={datos} />
     </div>
   );
 };
