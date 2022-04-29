@@ -1,9 +1,7 @@
 import React from "react";
 
 export const ClimaP = (props) => {
-  const { datos } = props;
-  const { ciudad, pais, pronostico } = props;
-  let dia = "";
+  const { pronostico } = props;
 
   return (
     <div
@@ -19,14 +17,6 @@ export const ClimaP = (props) => {
       <div className="my-auto">
         {pronostico[0] !== undefined &&
           pronostico.map((item, index) => {
-            // const cabeceraDia = () => {
-            //   dia = item.FECHAPronostico;
-            //   return <div className="text-2xl mb-6">{item.FECHAPronostico}</div>;
-            // };
-            // const cambiarDia = () => {
-            //   dia = item.FECHAPronostico;
-            // };
-
             return (
               <div
                 key={index}
@@ -55,7 +45,7 @@ export const ClimaP = (props) => {
                 </div>
               </div>
             );
-          })}{" "}
+          })}
       </div>
     </div>
   );

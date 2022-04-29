@@ -16,7 +16,6 @@ export default async function ApiClima(ciudad) {
 
     const respuestaApi = await fetch(API_URL);
     const datosJson = await respuestaApi.json();
-    console.log('datosJson lat y lon', datosJson)
 
     if (datosJson) {
         const UTC_TimezoneOffset_Pais = datosJson.timezone * 1000;
@@ -135,7 +134,6 @@ export default async function ApiClima(ciudad) {
             Estado: datosJson.weather[0].description.charAt(0).toUpperCase() +
                 datosJson.weather[0].description.slice(1).toLowerCase(),
         };
-        // console.log('ApiClima data', data)
         return data;
     }
     return {}
